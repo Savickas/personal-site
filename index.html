@@ -64,7 +64,7 @@
 					<img src="pics/content/profilowe24.png" alt="it's me" class="img-fluid" id="mwImg">
 				</div>
 				<div class="text-center">
-					<h5>Jestem samoukiem i pasjonatem nowych technologii. Aktualnie uczę się programowania w języku Javascript. Szlifuję  znajomość technologii/bibliotek HTML, CSS, jQuery oraz różnych frameworków do tworzenia stron i aplikacji internetowych. Od kilku lat rozwijam się w kierunku szeroko pojętego Webdevelopingu. Interesuję się również tematyką UI/UX oraz marketingiem internetowym.</h5>
+					<h5>Jestem samoukiem i pasjonatem nowych technologii. Aktualnie uczę się programowania w języku Javascript. Szlifuję  znajomość HTML, CSS, biblioteki jQuery oraz różnych frameworków do tworzenia stron i aplikacji internetowych. Od kilku lat rozwijam się w kierunku szeroko pojętego Webdevelopingu. Interesuję się również tematyką UI/UX oraz marketingiem internetowym.</h5>
 				</div>
 			</div>
 		</section>
@@ -110,9 +110,7 @@
 		<section class="contact" id="contact" href="#contact">
 			<div class="container">
 				<div class="text-center"><h5>Skontaktuj się ze mną:</h5></div>
-				
-
-				<form>
+				<form id="formularzKontaktowy" class="form-horizontal">
 					<div class="form-group row">
 						<div class="col-sm-6">
 							<input type="name" class="form-control" placeholder="Imię *">
@@ -128,7 +126,7 @@
 							<textarea name="" id="exampleTextarea" rows="8" class="form-control"></textarea>
 						</div>
 					</div>
-					<button type="submit" class="btn btn-primary">Wyślij</button>
+					<button type="submit" class="btn btn-outline-secondary">Wyślij</button>
 				</form>
 			</div>
 		</section>
@@ -139,20 +137,46 @@
 		</footer>
 	</div>
 <!-- JavaScripts -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js">
-    $('html, body').animate({
-        scrollTop: $("#target-element").offset().top
-    }, 1000);
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+// Select all links with hashes
+$('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
+      }
+    }
+  });
 </script>
 <script src="JS/bootstrap.min.js"></script>
-<script src="JS/tether.min.js"></script>
-<!-- Tooltip -->
-<script type="text/javascript">
-$(function() {
-	$('[data-toggle="tooltip"]').tooltip()
-})
-
-</script>
 
 </body>
 </html>
