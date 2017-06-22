@@ -19,9 +19,6 @@
 }
 
 @media only screen and (max-width: 763px) {
-	.jumbotron {
-	padding: 1vh, 0, 1vh, 0;
-	}
 	.jumbotron h1 {
 	font-size: 2em;
 	}
@@ -35,9 +32,6 @@
 	header {
 	background: #fff;
 	height: 100%;
-	}
-	.aboutMe h5 {
-	font-size: 3.5vw;
 	}
 	#mwImg {
 	padding-top: 10vh;
@@ -54,25 +48,29 @@
 	padding-top: 5vh;
 	font-family: 'Roboto', sans-serif;
 	}
-	form {
-	padding-top: 5vh;
-	padding-bottom: 5vh;
-	}
 }
 
 header {
-	background: #fff;
 	background-size: cover;
 	height: 100vh;
 }
 
 #mwImg {
-	padding-top: 15vh;
+	padding: 10px;
+	position: relative;
+	top: 40px;
+	left: -50px;
+	z-index: 999;
 }
 
 .aboutMe {
 	height: 100vh;
-	color: #fff;
+	background-color: #fff;
+}
+
+.aboutMe .jumbotron {
+	z-index: -1;
+	background: transparent;
 }
 
 .aboutMe h5 {
@@ -80,10 +78,29 @@ header {
 	font-family: 'Roboto', sans-serif;
 }
 
+.aboutMe .nav img {
+	padding: 20px 30px 0px;
+	height: 6vh;
+}
+
+.aboutMe img:hover {
+	-moz-transform: scale(1.2);
+	-webkit-transform: scale(1.2);
+	-o-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	transform: scale(1.2);
+
+	-webkit-transition: all 150ms ease-in-out;
+	-moz-transition: all 150ms ease-in-out;
+	-ms-transition: all 150ms ease-in-out;
+	-o-transition: all 150ms ease-in-out;
+	transition: all 150ms ease-in-out;
+}
+
 .technology {
 	background: url(../pics/content/laptop-comp.jpg) fixed;
 	background-size: cover;
-	height: 100vh;
+	height: 50vh;
 	background-repeat:no-repeat;
 	background-position:center;
 }
@@ -94,72 +111,54 @@ header {
 	padding: 1vw;
 }
 
+.technology img:hover {
+	-moz-transform: scale(1.2);
+	-webkit-transform: scale(1.2);
+	-o-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	transform: scale(1.2);
+
+	-webkit-transition: all 150ms ease-in-out;
+	-moz-transition: all 150ms ease-in-out;
+	-ms-transition: all 150ms ease-in-out;
+	-o-transition: all 150ms ease-in-out;
+	transition: all 150ms ease-in-out;
+}
+
 .technology h5 {
 	padding-top: 100px;
 	padding-bottom: 50px;
 	font-family: 'Roboto', sans-serif;
 }
 
-.projects1 {
-	height: 20vh;
-}
-
-.projects1 h5 {
-	padding-top: 9vh;
-	font-family: 'Roboto', sans-serif;
-	color: #fff;
-}
-
-.projects2 {
-	background: url(../pics/content/sketching-sm.jpg) fixed;
-	background-size: cover;
-	height: 150vh;
-	background-repeat:no-repeat;
-	background-position:center;
-}
-
-.projects2 .container {
-	top: 10vh;
-}
-
-.col-lg-3 {
-	background-color: white;
-	height: 100px;
-	margin: 10px;
-	position: relative;
-	min-height: 1px;
-	padding-right: 15px;
-	padding-left: 15px;
-}
-
 .contact {
 	background: #0275d8;
+	height: 450px;
 }
 
 .contact h5 {
-	padding-top: 100px;
+	padding: 100px 0 50px 0;
 	font-family: 'Roboto', sans-serif;
 	color: #fff;
 }
 
-form {
-	padding-top: 80px;
-	padding-bottom: 30px;
+.contact img {
+	padding: 15px;
+	width: 70px;
 }
 
 /////////////// footer ///////////////
 
-body {
-    flex-direction: column;
-    min-height: 100vh;
-    display: flex;
-    margin: 0px;
+html, body {
+	margin: 0;
+	padding: 0;
+	border: 0;
 }
 
 footer {
 	padding: 10px 10px 10px 0;
 	background: #0275d8;
-	
+	height: 50px;
 }
 
 footer p {
@@ -167,4 +166,16 @@ footer p {
 	text-align: right;
 	font-family: 'Roboto', sans-serif;
 	font-size: 10px;
+}
+
+footer ul {
+	border-bottom: 20px;
+}
+
+.hide{
+	opacity:0
+}
+ 
+.show {
+	opacity: 1;
 }

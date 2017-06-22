@@ -6,12 +6,9 @@
 	<meta name="author" content="Sam Norton">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<link rel="shortcut icon" href="favicon.ico">
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="style/bootstrap.min.css">
 	<link rel="stylesheet" href="style/custom.css">
-	<!-- Animate CSS -->
-	<link rel="stylesheet" href="style/animate.css">
 	<!-- Fonts -->
 	<link href='https://fonts.googleapis.com/css?family=Lato:400,700,900,300' rel='stylesheet' type='text/css'>
 	<link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto" rel="stylesheet">
@@ -23,7 +20,7 @@
 <!--- CONTENT HERE -->
 	<div class="wrapper">
 <!--- HEADER -->
-		<header class="bg-primary">
+		<header>
 <!--- NAV -->
 <nav class="navbar navbar-toggleable-md navbar-light">
 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">	
@@ -41,6 +38,9 @@
 	        <a class="nav-link" href="#technology">Technologie</a>
 	      </li>
 	      <li class="nav-item">
+	        <a class="nav-link" href="#projects">Projekty</a>
+	      </li>
+	      <li class="nav-item">
 	        <a class="nav-link" href="#contact">Kontakt</a>
 	      </li>
 	    </ul>
@@ -48,11 +48,11 @@
 </nav>
 <!--- HEADER CONTENT -->
 			<div class="text-center">
-				<div class="jumbotron bg-primary">
+				<div class="jumbotron">
 					<div class="container">
 					<h1 class="display-3">Marcin Wardzinski</h1>
 						<p class="lead">Web designer i Front-end developer</p>
-						<a href="#aboutMe" class="btn bg-inverse animated zoomIn" role="button">Dowiedz się więcej...</a>
+						<a href="#aboutMe" class="btn btn-primary" role="button">Dowiedz się więcej...</a>
 					</div>
 				</div>
 			</div>
@@ -60,28 +60,11 @@
 <!--- ABOUT ME SECTION -->
 		<section class="aboutMe" id="aboutMe" href="#aboutMe">
 			<div class="container">
-				<img src="pics/content/profilowe24.png" alt="it's me" class="float-right" id="mwImg">
-				<div class="jumbotron jumbotron-fluid" data-animate="fadeIn">
-				  <h1 class="display-3">O mnie</h1>
-				  <p class="lead">Jestem samoukiem i pasjonatem nowych technologii. Aktualnie uczę się programowania w języku Javascript. Szlifuję  znajomość HTML, CSS, biblioteki jQuery oraz różnych frameworków do tworzenia stron i aplikacji internetowych. Od kilku lat rozwijam się w kierunku szeroko pojętego Webdevelopingu. Interesuję się również tematyką UI/UX oraz marketingiem internetowym.</p>
-				  <hr class="my-4">
-				  <p class="lead">
-				  </p>
-					<p class="lead">
-				    	<a class="btn btn-primary" href="#technology" role="button">Przejdź dalej</a>
-					</p>
-						<ul class="nav justify-content-center">				  
-							<li>
-								<a href="https://github.com/Savickas">
-									<img src="pics/content/github.svg">
-								</a>
-							</li>
-							<li>
-								<a href="https://codepen.io/marcinww">
-									<img src="pics/content/codepen.svg">
-								</a>
-							</li>
-						</ul>
+				<div class="text-center">
+					<img src="pics/content/profilowe24.png" alt="it's me" class="img-fluid" id="mwImg">
+				</div>
+				<div class="text-center">
+					<h5>Jestem samoukiem i pasjonatem nowych technologii. Aktualnie uczę się programowania w języku Javascript. Szlifuję  znajomość HTML, CSS, biblioteki jQuery oraz różnych frameworków do tworzenia stron i aplikacji internetowych. Od kilku lat rozwijam się w kierunku szeroko pojętego Webdevelopingu. Interesuję się również tematyką UI/UX oraz marketingiem internetowym.</h5>
 				</div>
 			</div>
 		</section>
@@ -90,35 +73,62 @@
 			<div class="text-center">
 				<h5>Technologie i narzędzia których używam</h5>
 			</div>
-			<div class="container" data-animate="fadeIn">
+			<div class="container">
 				<div class="row justify-content-center">
-					<div class="d-flex justify-content"><img src="pics/content/bootstrap.svg" alt="bootstrap"></div>
-					<div class="d-flex justify-content"><img src="pics/content/html5.svg" alt="html5"></div>
-					<div class="d-flex justify-content"><img src="pics/content/css3.svg" alt="css3"></div>
-					<div class="d-flex justify-content"><img src="pics/content/JQuery.svg" alt="jQuery"></div>
-					<div class="d-flex justify-content"><img src="pics/content/JS.svg" alt="js"></div>
-					<div class="d-flex justify-content"><img src="pics/content/git.svg" alt="git"></div>
-					<div class="d-flex justify-content"><img src="pics/content/ps.svg" alt="photoshop"></div>
-					<div class="d-flex justify-content"><img src="pics/content/ai.svg" alt="illustrator"></div>
+					<div class="d-flex justify-content-stretch"><img src="pics/content/bootstrap.svg" alt="bootstrap"></div>
+					<div class="d-flex justify-content-stretch"><img src="pics/content/html5.svg" alt="html5"></div>
+					<div class="d-flex justify-content-stretch"><img src="pics/content/css3.svg" alt="css3"></div>
+					<div class="d-flex justify-content-stretch"><img src="pics/content/JQuery.svg" alt="jQuery"></div>
+					<div class="d-flex justify-content-stretch"><img src="pics/content/JS.svg" alt="js"></div>
+					<div class="d-flex justify-content-stretch"><img src="pics/content/git.svg" alt="git"></div>
+					<div class="d-flex justify-content-stretch"><img src="pics/content/ps.svg" alt="photoshop"></div>
+					<div class="d-flex justify-content-stretch"><img src="pics/content/ai.svg" alt="illustrator"></div>
+				</div>
+			</div>
+		</section>
+<!--- PROJECTS SECTION -->
+		<section class="projects1" id="projects" href="#projects">
+			<div class="container">
+				<div class="text-center">
+					<h5>Projekty</h5>
+				</div>
+			</div>
+		</section>
+		<section class="projects2">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-lg-3">1</div>
+					<div class="col-lg-3">2</div>
+					<div class="col-lg-3">3</div>
+					<div class="col-lg-3">4</div>
+					<div class="col-lg-3">5</div>
+					<div class="col-lg-3">6</div>
 				</div>
 			</div>
 		</section>
 <!--- CONTACT -->
 		<section class="contact" id="contact" href="#contact">
 			<div class="container">
-					<h5 data-animate="fadeIn">Skontaktuj się ze mną:</h5>
-						<ul class="nav flex-column" data-animate="zoomIn">
-							<li>
-								<a href="https://www.linkedin.com/in/marcinwardzinski" class="text-white"><img src="pics/content/linkedin.svg">Linked In</a>
-							</li>
-							<li>
-								<a href="https://www.facebook.com/marcin.wardzinski" class="text-white"><img src="pics/content/facebook.svg">Facebook</a>
-							</li>
-							<li>
-								<a href="mailto:marcinw858@gmail.com" class="text-white"><img src="pics/content/email.svg">e-mail</a>
-							</li>
-						</ul>
-				</div>
+				<div class="text-center"><h5>Skontaktuj się ze mną:</h5></div>
+				<form id="formularzKontaktowy" class="form-horizontal">
+					<div class="form-group row">
+						<div class="col-sm-6">
+							<input type="name" class="form-control" placeholder="Imię *">
+						</div>
+					</div>
+					<div class="form-group row">
+						<div class="col-sm-6">
+							<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="e-mail *">
+						</div>
+					</div>						
+					<div class="form-group row">
+						<div class="col-sm-6">
+							<textarea name="" id="exampleTextarea" rows="8" class="form-control"></textarea>
+						</div>
+					</div>
+					<button type="submit" class="btn btn-outline-secondary">Wyślij</button>
+				</form>
+			</div>
 		</section>
 		<footer>
 			<div class="container">
@@ -166,18 +176,7 @@ $('a[href*="#"]')
     }
   });
 </script>
-<script src="JS/jquery.viewportchecker.min.js"></script>
-<script>
-	$(document).ready(function(){
-		$('*[data-animate]').addClass('hide').each(function(){
-			$(this).viewportChecker({
-				classToAdd: 'show animated ' + $(this).data('animate'),
-				classToRemove: 'hide',
-				offset: '30%'
-			});
-		});
-	});
-</script>
 <script src="JS/bootstrap.min.js"></script>
+
 </body>
 </html>
